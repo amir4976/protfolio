@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: PeydaWeb;
+    src: url('../public/PeydaWeb-Bold.ttf');
+}
+*{
+    scroll-behavior: smooth;
+}
+.background-nois{
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-nois::before{
+    position: absolute;
+    content: '';
+    top: -10rem;
+    right: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 1;
+    pointer-events: none;
+    background-position: 50%;
+    animation: BgNoise .2s steps(2) infinite;
+    animation-duration: .2s;
+    animation-timing-function: steps(2);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: BgNoise;
+    background-image: url('../public/bg-noise.png');
+    background-size: 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar-thumb {
+    background: rgb(66, 66, 66); 
+    border-radius: 10px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    /* border-radius: 10px; */
+    background-color: #0a0a0a;
   }
-  to {
-    transform: rotate(360deg);
+  ::-webkit-scrollbar {
+    width: 10px;
   }
+@keyframes BgNoise{
+    10%{
+        top: -5rem;
+        right: -5rem;
+    }100%{
+        top: -10rem;
+        right: -10rem;
+    }
+}
+.App{
+    /* position: fixed; */
+    /* width: 100%; */
+    flex:8;
+    /* height: max-content; */
+    background-color: #0a0a0a;
+     overflow: hidden;
+     /* overflow-x: hidden; */
+}
+.mouse{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 3;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background: #fff;
+}
+.section{
+    height: 100vh;
+}
+.leftText{
+    transform: rotate(90deg);
+    width: fit-content;
+    height: max-content;
+
+}
+
+
+.App-Container{
+    display: flex;
+   
 }

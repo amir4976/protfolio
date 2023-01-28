@@ -1,0 +1,34 @@
+.AboutMe-container{
+    width: 100%;
+    margin: 150px 0;
+    
+}
+.AboutMeRowSides{
+    display: flex;
+
+align-items: center;
+justify-content: center;
+flex-direction: column;
+/* margin-bottom: 100px; */
+}
+.infoBox{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(20, 20, 20);
+    margin-top: 20px;
+    z-index: 2 ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    font-weight: 3000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius:10px ;
+    transition: all 0.2s;
+    cursor: none;
+}
+.infoBox:hover{
+    transform: scale(1.1);
+}

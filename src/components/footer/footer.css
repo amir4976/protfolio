@@ -1,0 +1,9 @@
+.Footer-contianer{
+    height: 10000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;flex-direction: column;
+
+    color: #fff;
+}
